@@ -1,0 +1,47 @@
+// Most only for iPhone5 (320px)
+@mixin phones-xs {
+  @media (max-width: 321px) {
+    @content;
+  }
+}
+// Extra small devices (portrait phones, less than 576px)
+@mixin tablets-sm {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
+// Small devices (landscape phones, 768px)
+@mixin tablets {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Medium devices (tablets, 1024px)
+@mixin tablets-lg {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+// Large devices (desktops, 1366px)
+@mixin desktops {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+
+// Large devices (desktops full-HD, 1980px)
+@mixin desktops-lg {
+  @media (min-width: 1980px) {
+    @content;
+  }
+}
+
+// Large devices (desktops 2K, 2160px)
+@mixin desktops-xl {
+  @media (min-width: 2160px) {
+    @content;
+  }
+}

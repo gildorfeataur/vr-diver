@@ -1,0 +1,33 @@
+{
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "parcel": "latest",
+    "sass": "^1.69.5",
+    "sharp": "^0.31.3"
+  },
+  "name": "vr-diver",
+  "version": "1.0.0",
+  "description": "Virtual reality club site",
+  "source": "index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf .cache",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gildorfeataur/vr-diver.git"
+  },
+  "keywords": [],
+  "author": "Bohdan Kirianov",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/gildorfeataur/vr-diver/issues"
+  },
+  "homepage": "https://github.com/gildorfeataur/vr-diver#readme",
+  "dependencies": {
+    "modern-normalize": "^2.0.0"
+  }
+}

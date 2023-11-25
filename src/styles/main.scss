@@ -1,0 +1,135 @@
+@import "./init";
+@import '../../node_modules/modern-normalize/modern-normalize.css';
+
+html {
+  font-family: $system-fonts-list;
+}
+
+body {
+  font: $fw-base #{$fs-base}/#{$lh-base} $regular-font;
+  background-color: $background;
+  min-width: 320px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: $primary-text;
+  font-weight: normal;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+  height: 100vh;
+  padding: 0;
+}
+
+p {
+  @include font(400, 14px, 1.5, $regular-font);
+  margin: 0;
+}
+
+button {
+  @include transition();
+  margin: 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  color: $primary-text;
+  outline: none;
+  cursor: pointer;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+a {
+  @include transition();
+  text-decoration: none;
+  color: $secondary-text;
+  outline: none;
+
+  &:hover {
+    @include transition();
+    color: $primary-text;
+  }
+}
+
+h1 {
+  @include font($fw-base, 34px, 120%, $header-font);
+  margin: 0;
+  color: $secondary-text;
+
+  @include tablets {
+    @include font($fw-base, 24px, 30px);
+  }
+}
+
+h2 {
+  @include font($fw-base, 30px, 120%, $header-font);
+  margin: 0;
+  color: $secondary-text;
+
+  @include tablets {
+    @include font($fw-base, 24px, 30px);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $header-height-mob;
+  padding: 0 $gap3;
+  border-bottom: 1px solid $secondary;
+
+  @include tablets {
+    padding: 0 $gap4;
+  }
+
+  &__logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0px rgba(106, 202, 235, 0.30);
+  }
+
+  &__slogan {
+    margin-left: $gap3;
+
+    & > h5 {
+      @include font(normal, 24px, 31px, $header-font);
+      color: $secondary-text;
+      text-shadow: 0px 0px 2px $secondary-text;
+      margin: 0;
+    }
+
+    & > h6 {
+      @include font(normal, 12px, 15px, $header-font);
+      color: $white;
+      text-shadow: 0px 0px 4px #B31A75;
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    @include size(24px, 16px);
+    display: grid;
+    gap: 6px 0;
+    margin-left: auto;
+
+    span {
+      @include size(100%, 2px);
+      background: $secondary-text;
+    }
+  }
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 $gap3;
+}
+
+.title {
+  color: $secondary-text;
+}

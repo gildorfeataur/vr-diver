@@ -1,0 +1,39 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font($fw, $fs, $lh: $lh-base, $ff: $regular-font) {
+  font: $fw #{$fs}/#{$lh} $ff;
+}
+
+@mixin font-size($size: 16px, $height: $size) {
+  line-height: $height / $size;
+  font-size: $size;
+}
+
+@mixin absolute($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  margin: auto;
+}
+
+@mixin transition($prop: all, $duration: 0.25s, $easing: ease-out) {
+  transition-duration: $duration;
+  transition-property: $prop;
+  transition-timing-function: $easing;
+}
+
+@mixin overlay($background: rgba($black, 0.5)) {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $background;
+  width: 100%;
+  height: 100%;
+}
