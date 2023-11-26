@@ -7,8 +7,8 @@
   font: $fw #{$fs}/#{$lh} $ff;
 }
 
-@mixin font-size($size: 16px, $height: $size) {
-  line-height: $height / $size;
+@mixin font-size($size: 16px, $lh: $lh-base,) {
+  line-height: $lh;
   font-size: $size;
 }
 

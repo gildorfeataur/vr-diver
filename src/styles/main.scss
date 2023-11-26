@@ -8,6 +8,8 @@ html {
 body {
   font: $fw-base #{$fs-base}/#{$lh-base} $regular-font;
   background-color: $background;
+  background: url("../img/background.png") center no-repeat;
+  background-size: cover;
   min-width: 320px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -40,15 +42,6 @@ button {
   }
 }
 
-.btn {
-  @include font(400, 20px, 120%, $subheader-font);
-  @include size(100%, 40px);
-  color: $background-2;
-  background-color: $secondary-text;
-  text-transform: uppercase;
-  border-radius: $br-default;
-}
-
 a {
   @include transition();
   text-decoration: none;
@@ -58,6 +51,41 @@ a {
   &:hover {
     @include transition();
     color: $primary-text;
+  }
+}
+
+.btn {
+  @include font(400, 20px, 120%, $subheader-font);
+  @include size(100%, 40px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $background-2;
+  background-color: $secondary-text;
+  text-transform: uppercase;
+  border-radius: $br-default;
+
+  &--link {
+    height: 8vh;
+    background-color: rgba($color: $primary-text, $alpha: 0.8);
+
+    img {
+      @include size(28px);
+      margin-right: $gap2;
+    }
+
+    &:hover {
+      color: $background;
+      background-color: rgba($color: $primary-text, $alpha: 1);
+    }
+
+    @include phones-xs {
+      @include font-size(14px, 100%);
+
+      img {
+        @include size(20px);
+      }
+    }
   }
 }
 
@@ -141,13 +169,20 @@ main {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 $gap3;
+
+  & > h1 {
+    text-align: center;
+    margin: $gap2 0;
+  }
 }
 
 .hero {
-  padding: 30px 0;
-  border-bottom: 1px solid $secondary;
+  display: grid;
+  gap: $gap3;
+  padding: $gap3 0;
+  max-width: 768px;
 
-  p {
-    margin: $gap3 0;
+  @include phones-xs {
+    gap: $gap2;
   }
 }
