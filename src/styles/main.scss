@@ -115,7 +115,7 @@ h2 {
   width: 100%;
   height: $header-height-mob;
   padding: 0 $gap3;
-  border-bottom: 1px solid $secondary;
+  backdrop-filter: brightness(65%);
 
   @include tablets {
     padding: 0 $gap4;
@@ -126,7 +126,7 @@ h2 {
     height: 42px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0px 0px 5px 0px rgba(106, 202, 235, 0.3);
+    box-shadow: 0px 0px 7px 0px rgba(106, 202, 235, 0.5);
 
     img {
       @include size(100%);
@@ -181,6 +181,7 @@ main {
   gap: $gap3;
   padding: $gap3 0;
   max-width: 768px;
+  margin: 0 auto;
 
   @include phones-xs {
     gap: $gap2;

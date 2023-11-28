@@ -1,6 +1,8 @@
 {
   "devDependencies": {
+    "@parcel/packager-raw-url": "^2.10.3",
     "@parcel/transformer-sass": "^2.10.3",
+    "@parcel/transformer-webmanifest": "^2.10.3",
     "parcel": "latest",
     "sass": "^1.69.5",
     "sharp": "^0.31.3"
