@@ -8,7 +8,7 @@ html {
 body {
   font: $fw-base #{$fs-base}/#{$lh-base} $regular-font;
   background-color: $background;
-  background: url("../img/background.png") center no-repeat;
+  background: linear-gradient(90deg, rgba(80,34,81,1) 0%, rgba(111,58,100,1) 35%, rgba(58,44,148,1) 100%);
   background-size: cover;
   min-width: 320px;
   overflow-x: hidden;
@@ -89,27 +89,31 @@ a {
   }
 }
 
-h1 {
-  @include font($fw-base, 34px, 120%, $header-font);
-  margin: 0;
-  color: $secondary-text;
+// h1 {
+//   @include font($fw-base, 34px, 120%, $header-font);
+//   margin: 0;
+//   color: $secondary-text;
 
-  @include tablets {
-    @include font($fw-base, 24px, 30px);
-  }
-}
+//   @include tablets {
+//     @include font($fw-base, 24px, 30px);
+//   }
+// }
 
-h2 {
-  @include font($fw-base, 30px, 120%, $header-font);
-  margin: 0;
-  color: $secondary-text;
+// h2 {
+//   @include font($fw-base, 30px, 120%, $header-font);
+//   margin: 0;
+//   color: $secondary-text;
 
-  @include tablets {
-    @include font($fw-base, 24px, 30px);
-  }
-}
+//   @include tablets {
+//     @include font($fw-base, 24px, 30px);
+//   }
+// }
 
 .header {
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
   display: flex;
   align-items: center;
   width: 100%;
@@ -137,14 +141,14 @@ h2 {
   &__slogan {
     margin-left: $gap3;
 
-    & > h5 {
+    & > h1 {
       @include font(normal, 24px, 31px, $header-font);
       color: $secondary-text;
       text-shadow: 0px 0px 2px $secondary-text;
       margin: 0;
     }
 
-    & > h6 {
+    & > h2 {
       @include font(normal, 12px, 15px, $header-font);
       color: $white;
       text-shadow: 0px 0px 4px #b31a75;
@@ -166,6 +170,8 @@ h2 {
 }
 
 main {
+  height: calc(100vh - 64px);
+  overflow-y: auto;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 $gap3;
