@@ -5,7 +5,7 @@
     "@parcel/transformer-webmanifest": "^2.10.3",
     "parcel": "latest",
     "sass": "^1.69.5",
-    "sharp": "^0.31.3"
+    "sharp": "^0.33.1"
   },
   "name": "vr-diver",
   "version": "1.0.0",
